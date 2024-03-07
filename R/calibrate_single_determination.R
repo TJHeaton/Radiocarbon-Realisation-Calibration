@@ -33,7 +33,7 @@ BlockCalibSingle <-  function(
   block_calibration_curve_sd <- unlist(block_calibration_curve[2,]) 
   
   # Likelihood of observed 14C age for each considered calendar year in chosen grid
-  lilelihood <- dnorm(x = obs_radiocarbon_age, 
+  likelihood <- dnorm(x = obs_radiocarbon_age, 
                       mean = block_calibration_curve_mean, 
                       sd = sqrt(block_calibration_curve_sd^2 + obs_radiocarbon_sigma^2))
   
